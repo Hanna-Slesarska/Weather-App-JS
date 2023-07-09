@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/e303c9fea7.js" crossorigin="anonymous"></script>
+  <link href="style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>Weather App</title>
+</head>
+<body>
+    <div id="main"> 
+        <div id="header"> 
+            <div id="temps" class="gsap">
+                <div class="icon">
+                    <img id="condIcon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="current-conditions" width="150px">
+                </div>
+              
+                <div class="temperature">
+                    <p id="temp">75°F</p>
+                </div>
+            </div>
+            <div id="location" class="gsap">
+                <div id="cityCountry">
+                    <p id="city">Chicago</p>
+                </div>
+                <div id="time">
+                    <p id="date"></p>
+                </div>
+            </div>
+
+        </div>
+        <div id="today">
+            <input id="input" list="city-names" autocomplete="off" type="text" placeholder="Please select your city" spellcheck="false" />
+            <ul id="detals">
+                <h4>Weather Details</h4>
+                <li id="feelslike">Feels like: 75°F</li>
+                <li id="humidity">Humidity: 80%</li>
+                <li id="conditions">Clear</li>
+                <li id="minmax">High: 80°F | Low: 55°F</li>
+                <li id="wind">Wind: 8 m/sec</li>
+            </ul>
+            <br>
+                <div id="ipDegrees">
+                    <span id="fahrenheit">°F</span>
+                    <label class="switch"><input id="degrees" type="checkbox"><span class="slider round"></span></label>
+                    <span id="celcius">°C</span>
+              </div>
+          </div>  
+      </div> 
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TextPlugin.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollToPlugin.min.js"></script>
+      <script src="script.js"></script>
+  </body>
+  </html>   

@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #111;
+    background-image: url('bg.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#main {
+    color: #fff;
+    display: flex;
+    /*position: relative;*/
+    min-height: 100vh;
+} 
+
+#header {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#conditions {
+    text-transform: capitalize;
+}
+#condIcon {
+    color:#fff;
+}
+#location {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    justify-content: center;
+}
+#temps, #location {
+    margin: 0 20px;
+}
+#cityCountry {
+    display: flex;
+}
+#city {
+    font-size: 40px;
+}
+#city, #date {
+    margin: 0;
+}
+#date {
+    font-size: 23px;
+}
+
+#temps {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+#temp {
+    font-size: 140px;
+    margin: 0;
+}
+
+
+
+#today {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(110, 110, 110, 0.25);
+    box-shadow: 0 10px 30px rgba(0 0 0 0.3);
+    backdrop-filter: (blur (10px));
+    -webkit-backdrop-filter: (blur (10px));
+    z-index: 1;
+    padding: 20px 25px;
+    overflow-y: scroll;
+}
+#input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 80%;
+    padding: 0 20px 10px 0;
+    font-size: 25px;
+    color: #fff;
+    margin-top: 50px;
+}
+
+#input:focus {
+    outline: none;
+}
+#input::placeholder {
+    color: #ccc;
+}
+#detals {
+    padding: 0 15px ;
+    margin: 20px;
+    border-bottom: #ccc 1px solid;
+}
+h4 {
+    font-size: 25px;
+    margin-top: 50px;
+}
+li {
+    color: #ccc;
+    margin: 40px;
+    list-style: none;
+    font-size: 20px;
+    
+}
+#details li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+#ipDegrees { 
+    display: flex; 
+    align-items: center; 
+    align-items: center;
+    margin: 0.5em 0em; 
+    font-family: Lato, sans-serif; 
+    color: #fff; 
+    font-size: 2em; 
+    font-weight: bold; 
+}
+
+.switch { 
+    position: relative; 
+    display: inline-block; 
+    width: 60px; 
+    height: 34px; 
+}
+.switch input { 
+    opacity: 0; 
+    width: 0px; 
+    height: 0px; 
+}
+.slider { 
+    position: absolute; 
+    cursor: pointer; 
+    inset: 0px; 
+    border: 1px solid #ccc; 
+    transition: all 0.4s ease 0s; }
+.slider::before { 
+    position: absolute; 
+    content: ""; 
+    height: 26px; 
+    width: 26px; 
+    left: 3px; 
+    bottom: 3px; 
+    background-color: #fff; 
+    transition: all 0.4s ease 0s; 
+}
+input:focus + .slider { 
+    box-shadow: rgb(52, 72, 101) 0px 0px 1px; 
+}
+input:checked + .slider::before { 
+    transform: translateX(26px); 
+}
+.slider.round { 
+    border-radius: 34px; 
+}
+.slider.round::before { 
+    border-radius: 50%; 
+}
+@media all and (max-width: 1024px) {
+    #main {
+    flex-direction: column;
+    
+   }
+    #header, #today {
+        position: relative;
+        width: 90%;
+        align-self: center;
+        top: initial;
+    }
+    #today {
+        text-align: center;
+        width: 80%;
+    }
+    #header {
+        margin-top: 80px;
+    }
+    #temp {
+        font-size: 120px;
+    }
+    li {
+        color: #fff;
+        font-size: 25px;
+    }
+
+    #city {
+        font-size: 45px;
+        margin-bottom: 7px;
+    }
+    #ipDegrees {
+        justify-content: center;
+    }
+    #input {
+        text-align: center;
+        color: #fff;
+        font-size: 25px;
+    }
+    #input::placeholder {
+        color: #fff;
+        font-size: 25px;
+    }
+
+}
+@media all and (max-width: 800px) {
+    #today {
+        width: 70%;
+    }
+    #header {
+        margin-top: 50px;
+    }
+    #temp {
+        font-size: 85px;
+    }
+    #city {
+        font-size: 27px;
+    }
+    #date {
+        font-size: 20px;
+    }
+}
+@media all and (max-width: 500px) {
+    #main {
+        display: flex;
+    }
+    #temp {
+        font-size: 70px;
+    }
+    #city {
+        font-size: 25px;
+    }
+    #date {
+        font-size: 23px;
+        margin-bottom: 15px;
+    }
+    #header {
+        flex-direction: column;
+        align-items: center;
+    }
+    #input::placeholder {
+        font-size: 20px;
+    }
+}
